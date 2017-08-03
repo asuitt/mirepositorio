@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Ejemplo aprenderaprogramar.com</title><meta charset="utf-8">
+	<script src="validarut.js"></script>
+	<script src="scripts.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body oncopy="return false" oncut="return false" onpaste="return false"/>
+<form name="idForm">
+
+	<h1>Texto en h1</h1>
+	<h2>Este es otro texto con h2  ¿se nota la diferencia?</h2>
+	<h3>Este es el título del formulario</h3>
+
+	<div class="idTextForm">*Rut:</div>
+	<input id="idITextRut" type="text" name="rut" onblur="return checkRutGenerico(rut.value,false,2)" onkeypress="return soloRUT(event)"/>
+	<div id="idMsgRut" class="errorMsg"></div>
+	<br><br>
+
+	<div class="idTextForm">*Nombre:</div>
+	<input id="idITextNombre" type="text" name="nombre"  onkeypress="return validaTexto(event)"/>
+	<div id="idMsgNombre" class="errorMsg"></div>
+	<br><br>
+
+	<div class="idTextForm">*Apellidos:</div>
+	<input id="idITextApellidos" type="text" name="apellidos" onkeypress="return validaTexto(event)"/>
+	<div id="idMsgApellidos" class="errorMsg"></div>
+	<br><br>
+
+	<div class="idTextForm">*Correo electrónico</div>
+	<input id="idITextCorreo" type="text" name="correo" onblur="return validCorreo(event)"/>	
+	<div id="idMsgCorreo" class="errorMsg"></div>
+	<br><br>
+	
+	<input type="submit" value="Enviar" onclick="return enviar();"> 
+	<input type="submit" value="Limpiar"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,17 @@
+body {
+	background-color:yellow;
+}
+
+.idTextForm{
+	color: brown;
+	font-weight: bold
+}
+
+.errorValidIText {
+	border:1px solid red;
+}
+
+.errorMsg{
+	display:inline;
+	color: red;
+}
